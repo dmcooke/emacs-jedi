@@ -299,7 +299,7 @@ def candidate_symbol(comp):
 
     """
     try:
-        return comp.type[0].lower()
+        return comp.type.lower()
     except (AttributeError, TypeError):
         return '?'
 

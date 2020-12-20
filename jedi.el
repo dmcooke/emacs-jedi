@@ -34,7 +34,8 @@
      (cl-destructuring-bind (&key word doc description symbol)
          x
        (popup-make-item word
-                        :symbol symbol
+                        :symbol (substring symbol
+                                           0 (min 1 (length symbol)))
                         :document (unless (equal doc "") doc)
                         :summary description)))
    jedi:complete-reply))
